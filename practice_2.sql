@@ -26,18 +26,21 @@ WHERE post_date >= '2021-01-01' AND post_date < '2022-01-01'
 GROUP BY user_id
 HAVING COUNT(user_id)>=2
 --ex7
+SELECT card_name,
+MAX(issued_amount)-MIN(issued_amount) AS difference
+FROM monthly_cards_issued
+GROUP BY card_name
+ORDER BY MAX(issued_amount)-MIN(issued_amount) DESC
+--ex8
 
---ex7
+--ex9
 
---ex7
+--ex10
 
---ex7
+--ex11
 
---ex7
+--ex12
 
---ex7
-
---ex7
 
 
 
